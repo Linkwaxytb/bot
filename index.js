@@ -75,10 +75,11 @@ const RoiLion = new EmbedBuilder()
 
     const EmbedPrincipal = new EmbedBuilder()
 	.setColor(000000)
-	.setTitle('🎬 Films ')
-    .setDescription('Bot spécialisé dans la recherche de film')
+	.setTitle('FILMS ')
     .addFields(
-		{ name: '🔎 Recherche un film', value: 'Clique sur le bouton pour chercher un film.' })
+		{ name: '📜 Catalogue', value: 'Cliquez pour afficher tous les films disponibles sur le serveur' },
+   	        { name: '📖 Liste des films', value: 'Cliquer pour affichez les catégories des films disponibles' },
+   	        { name: '➕ Demande de film', value: 'Un film n est pas disponible ? Cliquez sur le bouton gris ci-dessous.' })
 
         const Embederror = new EmbedBuilder()
         .setColor(000000)
@@ -229,7 +230,7 @@ client.on('ready', () => {
 				new ButtonBuilder()
 					.setCustomId('primary')
 					.setLabel('🔎 Recherche un film')
-					.setStyle(ButtonStyle.Success),
+					.setStyle(ButtonStyle.Danger),
 			);
 
 		 interaction.reply({ embeds: [EmbedPrincipal], ephemeral: false, components: [row] });
