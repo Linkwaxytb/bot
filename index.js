@@ -228,9 +228,18 @@ client.on('ready', () => {
 		const row = new ActionRowBuilder()
 			.addComponents(
 				new ButtonBuilder()
-					.setCustomId('primary')
+					.setCustomId('UN')
+					.setLabel('📜 Catalogue')
+					.setStyle(ButtonStyle.Success),
+				new ButtonBuilder()
+					.setCustomId('DEUX')
 					.setLabel('🔎 Recherche un film')
 					.setStyle(ButtonStyle.Danger),
+				new ButtonBuilder()
+					.setCustomId('TROIS')
+					.setLabel('➕ Demande de film')
+					.setStyle(ButtonStyle.Link),
+			        
 			);
 
 		 interaction.reply({ embeds: [EmbedPrincipal], ephemeral: false, components: [row] });
