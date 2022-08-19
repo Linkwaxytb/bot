@@ -1,3 +1,4 @@
+ 
 //espace constantes obligatoires pour faire fonctionner le bot
 const Discord = require("discord.js");
 const { ActivityType } = require('discord.js');
@@ -6,7 +7,7 @@ const { Client, GatewayIntentBits } = require('discord.js');
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 const { SlashCommandBuilder } = require('discord.js');
 const wait = require('node:timers/promises').setTimeout;
-const { ActionRowBuilder, ModalBuilder, TextInputBuilder, TextInputStyle } = require('discord.js');
+const { ActionRowBuilder, ModalBuilder, TextInputBuilder, TextInputStyle, SelectMenuBuilder } = require('discord.js');
 const { InteractionType } = require('discord.js');
 const { EmbedBuilder } = require('discord.js');
 const { REST } = require('@discordjs/rest');
@@ -58,6 +59,20 @@ const RoiLion = new EmbedBuilder()
 	.setImage('https://probot.media/mj9ymIpvDb.gif')
 	.setFooter({ text: 'Par SPRINGOATFLARE', iconURL: 'https://i.imgur.com/AfFp7pu.png' });
 
+	const Sonic1 = new EmbedBuilder()
+	.setColor(000000)
+	.setTitle('Sonic ')
+	.addFields(
+		{ name: 'Synopsis', value: 'L histoire du hérisson bleu le plus rapide du monde qui arrive sur Terre, sa nouvelle maison. Sonic et son nouveau meilleur ami Tom font équipe pour sauver la planète du diabolique Dr. Robotnik, bien déterminé à régner sur le monde entier..' },
+		{ name: '\u200B', value: '\u200B' },
+		{ name: 'Bande Annonce', value: 'https://www.youtube.com/watch?v=NCZTYdAP6w0', inline: true },
+		{ name: 'Nous vous souhaitons un agréable visionnage', value: 'De la part de tout le staff', inline: true },
+	)
+	.addFields({ name: 'Lien Film', value: 'https://uqload.com/912mv2h3332y.html', inline: true })
+	.setImage('https://probot.media/LgK8WY4CYN.gif')
+	.setFooter({ text: 'Par SPRINGOATFLARE', iconURL: 'https://i.imgur.com/AfFp7pu.png' });
+
+
     const EmbedPrincipal = new EmbedBuilder()
 	.setColor(000000)
 	.setTitle('🎬 Films ')
@@ -78,7 +93,7 @@ const RoiLion = new EmbedBuilder()
 
 
 //espace personnalisation des réponse au modal
-client.on('interactionCreate', async interaction => {
+client.on('interactionCreate', interaction => {
 	if (interaction.type !== InteractionType.ModalSubmit) return;
     
 	
@@ -87,23 +102,21 @@ client.on('interactionCreate', async interaction => {
 
 
     //résultats du modal pour afficher l'embed
-        if ({ favoriteColor} = ("Roi Lion","Roi lion","roi lion","roi Lion","Le Roi Lion","le roi lion")){
+    if (['roi lion', 'le roi lion','Le roi Lion','Roi Lion'].includes(favoriteColor)){
 
-            await interaction.reply({ embeds: [RoiLion], ephemeral: true});}
+        interaction.reply({ embeds: [RoiLion], ephemeral: true});}
         
+    else if (['Alpha', 'alpha',].includes(favoriteColor)){
 
-        if ({ favoriteColor} = ("Alpha","alpha")){
+		interaction.reply({ embeds: [Alpha], ephemeral: true});}
+   
+    else if (['Sonic', 'sonic',].includes(favoriteColor)){
 
-            await interaction.reply({ embeds: [Alpha], ephemeral: true});}
-        
-        else if ({ favoriteColor} != ("Roi Lion","Roi lion","roi lion","roi Lion","Le Roi Lion","le roi lion,Alpha","alpha")){
-           await interaction.reply({ embeds: [Embederror], ephemeral: true});}
+		interaction.reply({ embeds: [Alpha], ephemeral: true});}
+	    
+	else  {
 
-
-
-
-
-
+        interaction.reply({ embeds: [Embederror], ephemeral: true})};
 
 
 
@@ -131,7 +144,12 @@ client.on('interactionCreate', async interaction => {
 
 
 
-        });//Fin
+
+
+
+
+
+	});//Fin
 
 
 
@@ -202,7 +220,7 @@ client.on('ready', () => {
   });
 
 
-  client.on('interactionCreate', async interaction => {
+  client.on('interactionCreate',  interaction => {
 	if (!interaction.isChatInputCommand()) return;
 
 	if (interaction.commandName === 'modfilms') {
@@ -214,7 +232,7 @@ client.on('ready', () => {
 					.setStyle(ButtonStyle.Success),
 			);
 
-		await interaction.reply({ embeds: [EmbedPrincipal], ephemeral: false, components: [row] });
+		 interaction.reply({ embeds: [EmbedPrincipal], ephemeral: true, components: [row] });
 	}
 });
 
