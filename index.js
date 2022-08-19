@@ -132,7 +132,7 @@ const RoiLion = new EmbedBuilder()
 //espace personnalisation des réponse au modal
 client.on('interactionCreate', interaction => {
 	if (interaction.type !== InteractionType.ModalSubmit) return;
-     console.log(favoriteColor, UserFlags)
+     console.log(favoriteColor, userInfo)
 	
 	var favoriteColor = interaction.fields.getTextInputValue('favoriteColorInput');
 
