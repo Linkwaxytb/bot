@@ -135,7 +135,7 @@ client.on('interactionCreate', interaction => {
          
 	
 	var favoriteColor = interaction.fields.getTextInputValue('favoriteColorInput');
-		console.log(interaction.user.tag + " a voulu regarder " + favoriteColor );
+		console.log(interaction.user.tag + " a tapé " + favoriteColor + " dans sa barre de recherche de film");
 
 
     //résultats du modal pour afficher l'embed
