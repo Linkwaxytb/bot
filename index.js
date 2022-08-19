@@ -232,7 +232,7 @@ client.on('ready', () => {
 					.setStyle(ButtonStyle.Success),
 			);
 
-		 interaction.reply({ embeds: [EmbedPrincipal], ephemeral: true, components: [row] });
+		 interaction.reply({ embeds: [EmbedPrincipal], ephemeral: false, components: [row] });
 	}
 });
 
