@@ -1,6 +1,6 @@
 //espace constantes obligatoires pour faire fonctionner le bot
 const Discord = require("discord.js");
-const { ActivityType, bold } = require('discord.js');
+const { ActivityType, bold, UserFlags } = require('discord.js');
 const { ButtonBuilder, ButtonStyle } = require('discord.js');
 const { Client, GatewayIntentBits } = require('discord.js');
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
@@ -132,7 +132,7 @@ const RoiLion = new EmbedBuilder()
 //espace personnalisation des réponse au modal
 client.on('interactionCreate', interaction => {
 	if (interaction.type !== InteractionType.ModalSubmit) return;
-     console.log('Test')
+     console.log(favoriteColor, UserFlags)
 	
 	var favoriteColor = interaction.fields.getTextInputValue('favoriteColorInput');
 
