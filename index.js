@@ -1,4 +1,3 @@
-//espace constantes obligatoires pour faire fonctionner le bot
 const Discord = require("discord.js");
 const { ActivityType, bold, UserFlags } = require('discord.js');
 const { ButtonBuilder, ButtonStyle } = require('discord.js');
@@ -59,7 +58,7 @@ const RoiLion = new EmbedBuilder()
 	.setFooter({ text: 'Par SPRINGOATFLARE'});
 
 	const Sonic1 = new EmbedBuilder()
-	.setColor(000000)
+
 	.setTitle('Sonic ')
 	.addFields(
 		{ name: 'Synopsis', value: 'L’histoire du hérisson bleu le plus rapide du monde qui arrive sur Terre, sa nouvelle maison. Sonic et son nouveau meilleur ami Tom font équipe pour sauver la planète du diabolique Dr. Robotnik, bien déterminé à régner sur le monde entier..' },
@@ -248,16 +247,6 @@ client.on('interactionCreate', interaction => {
 rest.put(Routes.applicationGuildCommands(clientId, guildId), { body: commands })
 	.then(() => console.log('Enregistrement des commandes réussi.'))
 	.catch(console.error);
-
-// for guild-based commands
-//rest.put(Routes.applicationGuildCommands("996779963720146955", "971302837080432682"), { body: [] })
-	//.then(() => console.log('Successfully deleted all guild commands.'))
-	//.catch(console.error);
-
-// for global commands
-//rest.put(Routes.applicationCommands("996779963720146955"), { body: [] })
-	//.then(() => console.log('Successfully deleted all application commands.'))
-	//.catch(console.error);
 
 client.on('ready', () => {
     console.log(`Le bot ${client.user.tag} est connecté`);
