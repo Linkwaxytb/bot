@@ -238,7 +238,8 @@ client.on('ready', () => {
 				new ButtonBuilder()
 					.setCustomId('TROIS')
 					.setLabel('➕ Demande de film')
-					.setStyle(ButtonStyle.Link),
+					.setStyle(ButtonStyle.Link)
+				        .setURL("https://discordapp.com/channels/971302837080432682/977877757289705503"),
 			        
 			);
 
