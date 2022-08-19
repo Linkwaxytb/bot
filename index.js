@@ -236,10 +236,9 @@ client.on('ready', () => {
 					.setLabel('🔎 Recherche un film')
 					.setStyle(ButtonStyle.Danger),
 				new ButtonBuilder()
-					.setCustomId('TROIS')
 					.setLabel('➕ Demande de film')
 					.setStyle(ButtonStyle.Link)
-				        .setURL("https://discordapp.com/channels/971302837080432682/977877757289705503"),
+				    .setURL("https://discordapp.com/channels/971302837080432682/977877757289705503"),
 			        
 			);
 
