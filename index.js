@@ -135,7 +135,7 @@ client.on('interactionCreate', interaction => {
          
 	
 	var favoriteColor = interaction.fields.getTextInputValue('favoriteColorInput');
-		console.log(favoriteColor, interaction);
+		console.log(favoriteColor, interaction.user.tag);
 
 
     //résultats du modal pour afficher l'embed
