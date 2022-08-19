@@ -135,32 +135,32 @@ client.on('interactionCreate', interaction => {
          
 	
 	var favoriteColor = interaction.fields.getTextInputValue('favoriteColorInput');
-
+		console.log(favoriteColor, userInfo);
 
 
     //résultats du modal pour afficher l'embed
     if (['roi lion', 'le roi lion','Le roi Lion','Roi Lion'].includes(favoriteColor)){
-	console.log(favoriteColor);
+
         interaction.reply({ embeds: [RoiLion], ephemeral: true});}
         
     else if (['Alpha', 'alpha',].includes(favoriteColor)){
-		console.log(favoriteColor);
+
 		interaction.reply({ embeds: [Alpha], ephemeral: true});}
    
     else if (['Sonic', 'sonic',].includes(favoriteColor)){
-		console.log(favoriteColor);
+
 		interaction.reply({ embeds: [Sonic1], ephemeral: true});}
 
 	else if (['Sonic 2', 'sonic 2','Sonic2', 'sonic2'].includes(favoriteColor)){
-		console.log(favoriteColor);
+
 		interaction.reply({ embeds: [Sonic2], ephemeral: true});}	
 
 	else if (['alita', 'Alita','allita', 'Allita','Alita Battle Angel','Alita battle angel',"alita battle angel",'Allita Battle Angel','Allita battle angel',"allita battle angel"].includes(favoriteColor)){
-		console.log(favoriteColor);
+
 		interaction.reply({ embeds: [Alita], ephemeral: true});}
 	    
 	else  {
-	console.log(favoriteColor);
+
         interaction.reply({ embeds: [Embederror], ephemeral: true})};
 
 
