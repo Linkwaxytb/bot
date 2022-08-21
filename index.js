@@ -32,7 +32,6 @@ const rest = new REST({ version: '10' }).setToken("OTk2Nzc5OTYzNzIwMTQ2OTU1.GbHi
 
 //Espace personnalisation de embeds
 const RoiLion = new EmbedBuilder()
-	.setColor(000000)
 	.setTitle('Le Roi Lion (en film) ')
 	.addFields(
 		{ name: 'Synopsis', value: 'Au fond de la savane africaine, tous les animaux célèbrent la naissance de Simba, leur futur roi. Les mois passent. Simba idolâtre son père, le roi Mufasa, qui prend à cœur de lui faire comprendre les enjeux de sa royale destinée. Mais tout le monde ne semble pas de cet avis. Scar, le frère de Mufasa, l’ancien héritier du trône, a ses propres plans. La bataille pour la prise de contrôle de la Terre des Lions est ravagée par la trahison, la tragédie et le drame, ce qui finit par entraîner l’exil de Simba. Avec l’aide de deux nouveaux amis, Timon et Pumbaa, le jeune lion va devoir trouver comment grandir et reprendre ce qui lui revient de droit…' },
@@ -45,7 +44,6 @@ const RoiLion = new EmbedBuilder()
 	.setFooter({ text: 'Par SPRINGOATFLARE'});
 
     const Alpha = new EmbedBuilder()
-	.setColor(000000)
 	.setTitle('Alpha ')
 	.addFields(
 		{ name: 'Synopsis', value: 'En Europe, il y a 20 000 ans, durant l’ère Paléolithique supérieur, un jeune homme part braver une nature dangereuse et inhospitalière afin de retrouver le chemin de sa tribu.' },
@@ -58,7 +56,6 @@ const RoiLion = new EmbedBuilder()
 	.setFooter({ text: 'Par SPRINGOATFLARE'});
 
 	const Sonic1 = new EmbedBuilder()
-
 	.setTitle('Sonic ')
 	.addFields(
 		{ name: 'Synopsis', value: 'L’histoire du hérisson bleu le plus rapide du monde qui arrive sur Terre, sa nouvelle maison. Sonic et son nouveau meilleur ami Tom font équipe pour sauver la planète du diabolique Dr. Robotnik, bien déterminé à régner sur le monde entier..' },
@@ -71,7 +68,6 @@ const RoiLion = new EmbedBuilder()
 	.setFooter({ text: 'Par SPRINGOATFLARE'});
 
 	const Sonic2 = new EmbedBuilder()
-	.setColor(000000)
 	.setTitle('Sonic 2 ')
 	.addFields(
 		{ name: 'Synopsis', value: 'Bien installé dans la petite ville de Green Hills, Sonic veut maintenant prouver qu’il a l’étoffe d’un véritable héros. Un défi de taille se présente à lui quand le Dr Robotnik refait son apparition. Accompagné de son nouveau complice Knuckles, ils sont en quête d’une émeraude dont le pouvoir permettrait de détruire l’humanité toute entière. Pour s’assurer que l’émeraude ne tombe entre de mauvaises mains, Sonic fait équipe avec Tails. Commence alors un voyage à travers le monde, plein de péripéties.' },
@@ -84,7 +80,6 @@ const RoiLion = new EmbedBuilder()
 	.setFooter({ text: 'Par SPRINGOATFLARE'});
 
 	const Alita = new EmbedBuilder()
-	.setColor(000000)
 	.setTitle('Alita Battle Angel ')
 	.addFields(
 		{ name: 'Synopsis', value: 'Lorsqu’Alita se réveille sans aucun souvenir de qui elle est, dans un futur qu’elle ne reconnaît pas, elle est accueillie par Ido, un médecin qui comprend que derrière ce corps de cyborg abandonné, se cache une jeune femme au passé extraordinaire. Ce n’est que lorsque les forces dangereuses et corrompues qui gèrent la ville d’Iron City se lancent à sa poursuite qu’Alita découvre la clé de son passé - elle a des capacités de combat uniques, que ceux qui détiennent le pouvoir veulent absolument maîtriser. Si elle réussit à leur échapper, elle pourrait sauver ses amis, sa famille, et le monde qu’elle a appris à aimer.' },
@@ -97,7 +92,6 @@ const RoiLion = new EmbedBuilder()
 	.setFooter({ text: 'Par SPRINGOATFLARE'});
 
 	const Ambulance = new EmbedBuilder()
-	.setColor(000000)
 	.setTitle('Ambulance ')
 	.addFields(
 		{ name: 'Synopsis', value: 'Lorsqu’Alita se réveille sans aucun souvenir de qui elle est, dans un futur qu’elle ne reconnaît pas, elle est accueillie par Ido, un médecin qui comprend que derrière ce corps de cyborg abandonné, se cache une jeune femme au passé extraordinaire. Ce n’est que lorsque les forces dangereuses et corrompues qui gèrent la ville d’Iron City se lancent à sa poursuite qu’Alita découvre la clé de son passé - elle a des capacités de combat uniques, que ceux qui détiennent le pouvoir veulent absolument maîtriser. Si elle réussit à leur échapper, elle pourrait sauver ses amis, sa famille, et le monde qu’elle a appris à aimer.' },
@@ -109,9 +103,38 @@ const RoiLion = new EmbedBuilder()
 	.setImage('https://probot.media/0cPTOZnt15.gif')
 	.setFooter({ text: 'Par SPRINGOATFLARE'});
 
+	const Apex = new EmbedBuilder()
+	.setTitle('Apex ')
+	.addFields(
+		{ name: 'Synopsis', value: 'Cinq chasseurs délite paient pour traquer un homme sur une île déserte. Les uns après les autres, ils commencent à disparaître à cause de l’ingéniosité et de l’instinct de survie de leur proie...' },
+		{ name: '\u200B', value: '\u200B' },
+		{ name: 'Bande Annonce', value: 'https://www.youtube.com/watch?v=6LGpw5pDKNc', inline: true },
+		{ name: 'Nous vous souhaitons un agréable visionnage', value: 'De la part de tout le staff', inline: true },
+	)
+	.addFields({ name: 'Lien Film', value: 'https://uqload.com/bx5yervb76zd.html', inline: true })
+	.setImage('https://probot.media/0cPTOZnt15.gif')
+	.setFooter({ text: 'Par SPRINGOATFLARE'});
+
+	const Prey1 = new EmbedBuilder()
+	.setTitle('Prey ')
+	.addFields(
+		{ name: 'Synopsis', value: 'Cinquième volet de la franchise Predator. Il y a trois siècles sur le territoire des Comanches, Naru, une farouche et brillante guerrière, se fait désormais un devoir de protéger sa tribu dès qu’un danger la menace. Elle découvre que la proie qu’elle traque en ce moment n’est autre qu’un prédateur extraterrestre particulièrement évolué doté d’un arsenal de pointe des plus sophistiqués. Une confrontation aussi perverse que terrifiante s’engage bientôt entre les deux adversaires...' },
+		{ name: '\u200B', value: '\u200B' },
+		{ name: 'Bande Annonce', value: 'https://www.youtube.com/watch?v=6LGpw5pDKNc', inline: true },
+		{ name: 'Nous vous souhaitons un agréable visionnage', value: 'De la part de tout le staff', inline: true },
+	)
+	.addFields({ name: 'Lien Film', value: 'https://uqload.com/cg8c116wnbny.html', inline: true })
+	.setImage('https://probot.media/xMxSdxfdtx.gif')
+	.setFooter({ text: 'Par SPRINGOATFLARE'});
+
+
+
+
+
+
+
 
     const EmbedPrincipal = new EmbedBuilder()
-	.setColor(000000)
 	.setTitle('FILMS ')
     .addFields(
 		{ name: '📜 Catalogue', value: 'Cliquez pour afficher tous les films disponibles sur le serveur '},
@@ -120,8 +143,8 @@ const RoiLion = new EmbedBuilder()
 
         const Embederror = new EmbedBuilder()
         .setColor(000000)
-        .setTitle('Le film que vous avez entré n est pas encore intégré au bot ')
-        .setDescription('ou alors vous vous êtes trompé lors de l écriture. Si vous pensez qu il y a une erreur contactez un membre du staff')
+        .setTitle('Le film que vous avez entré n’est pas encore intégré au bot ')
+        .setDescription('ou alors vous vous êtes trompé(e) lors de l’écriture. Si vous pensez qu’il y a une erreur contactez un membre du staff')
 //Fin de l'espace personnalisation des embeds
 
 
@@ -157,10 +180,22 @@ client.on('interactionCreate', interaction => {
 	else if (['alita', 'Alita','allita', 'Allita','Alita Battle Angel','Alita battle angel',"alita battle angel",'Allita Battle Angel','Allita battle angel',"allita battle angel"].includes(favoriteColor)){
 
 		interaction.reply({ embeds: [Alita], ephemeral: true});}
+
+	else if (['Apex', 'apex',].includes(favoriteColor)){
+
+		interaction.reply({ embeds: [Apex], ephemeral: true});}
+
+	else if (['prey','Prey','prey 1','Prey 1'].includes(favoriteColor)){
+
+		interaction.reply({ embeds: [Prey1], ephemeral: true})}
+
+
+
+
 	    
 	else  {
 
-        interaction.reply({ embeds: [Embederror], ephemeral: true})};
+        interaction.reply({ embeds: [Embederror], ephemeral: true})}
 
 
 
@@ -262,7 +297,7 @@ client.on('ready', () => {
 				new ButtonBuilder()
 					.setLabel('📜 Catalogue')
 					.setStyle(ButtonStyle.Link)
-					.setURL("https://th.bing.com/th/id/OIP.CiUHzzmmlTjpJPJLQ5Gt6QHaJQ?w=128&h=180&c=7&r=0&o=5&pid=1.7"),
+					.setURL("https://discord.com/channels/971302837080432682/991027182325362849"),
 				new ButtonBuilder()
 					.setCustomId('DEUX')
 					.setLabel('🔎 Recherche un film')
