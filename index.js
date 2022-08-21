@@ -16,7 +16,7 @@ const commands = [
 	new SlashCommandBuilder().setName('modfilms').setDescription('Replies with pong!'),
 ]
 	.map(command => command.toJSON());
-const rest = new REST({ version: '10' }).setToken("OTk2Nzc5OTYzNzIwMTQ2OTU1.GbHiDz.p4oKbS2Kjs3wbwQupLdA-pMV1nEbWFRBwWUOr0");
+const rest = new REST({ version: '10' }).setToken("process.env.TOKEN");
 //Fin des constantes
 
 
