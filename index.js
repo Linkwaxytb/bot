@@ -360,4 +360,4 @@ client.on('interactionCreate', async interaction => {
 
 
 //Token à NE PAS TOUCHER
-client.login("OTk2Nzc5OTYzNzIwMTQ2OTU1.GbHiDz.p4oKbS2Kjs3wbwQupLdA-pMV1nEbWFRBwWUOr0");
+client.login("process.env.TOKEN");
