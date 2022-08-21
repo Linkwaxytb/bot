@@ -359,3 +359,5 @@ client.on('interactionCreate', async interaction => {
 
 
 
+//Token à NE PAS TOUCHER
+client.login(process.env.TOKEN);
