@@ -13,7 +13,7 @@ const { Routes } = require('discord.js');
 const clientId = '996779963720146955';
 const guildId = '971302837080432682';
 const commands = [
-	new SlashCommandBuilder().setName('modfilms').setDescription('Replies with pong!'),
+	new SlashCommandBuilder().setName('modfilms').setDescription('Affiche le menu des films'),
 ]
 	.map(command => command.toJSON());
 const rest = new REST({ version: '10' }).setToken("OTk2Nzc5OTYzNzIwMTQ2OTU1.GqLzkP.2oMVRUp9B_CJKREi4TyRLlcjXSK9Y6R_KH7wLw");
