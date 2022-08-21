@@ -16,7 +16,7 @@ const commands = [
 	new SlashCommandBuilder().setName('modfilms').setDescription('Replies with pong!'),
 ]
 	.map(command => command.toJSON());
-const rest = new REST({ version: '10' }).setToken("process.env.TOKEN");
+const rest = new REST({ version: '10' }).setToken("OTk2Nzc5OTYzNzIwMTQ2OTU1.GqLzkP.2oMVRUp9B_CJKREi4TyRLlcjXSK9Y6R_KH7wLw");
 //Fin des constantes
 
 
@@ -360,4 +360,4 @@ client.on('interactionCreate', async interaction => {
 
 
 //Token à NE PAS TOUCHER
-client.login("process.env.TOKEN");
+client.login("OTk2Nzc5OTYzNzIwMTQ2OTU1.GqLzkP.2oMVRUp9B_CJKREi4TyRLlcjXSK9Y6R_KH7wLw");
