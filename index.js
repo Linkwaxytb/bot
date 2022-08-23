@@ -18,10 +18,14 @@ const commands = [
 ]
 	.map(command => command.toJSON());
 const rest = new REST({ version: '10' }).setToken(process.env.BOT_TOKEN);
+const host = '0.0.0.0';
+const port = process.env.PORT || 3000;
 //Fin des constantes
 
 
-
+app.listen(port, host, function() {
+  console.log("Server started.......");
+});
 
 
 
