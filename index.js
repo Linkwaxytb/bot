@@ -23,11 +23,6 @@ const port = process.env.PORT || 3000;
 //Fin des constantes
 
 
-app.listen(port, host, function() {
-  console.log("Server started.......");
-});
-
-
 
 
 
