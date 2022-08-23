@@ -18,8 +18,14 @@ const commands = [
 ]
 	.map(command => command.toJSON());
 const rest = new REST({ version: '10' }).setToken(process.env.BOT_TOKEN);
-const port = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Our app is running on port ${ PORT }`);
+});
 //Fin des constantes
+
+
+
 
 
 
@@ -186,9 +192,11 @@ client.on('interactionCreate', interaction => {
 
 	else if (['prey','Prey','prey 1','Prey 1'].includes(favoriteColor)){
 
-		interaction.reply({ embeds: [Prey1], ephemeral: true})}
+		interaction.reply({ embeds: [Prey1], ephemeral: true});}
 
+	else if (['Matrix','matrix','Matrix 1','matrix 1'].includes(favoriteColor)){
 
+		interaction.reply({ embeds: [Matrix1], ephemeral: true});}
 
 
 	    
