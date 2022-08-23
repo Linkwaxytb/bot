@@ -1,8 +1,23 @@
 {
   "dependencies": {
-    "discord.js": "^14.0.3"
+    "discord.js": "^14.0.3",
+    "dotenv": "^16.0.1"
   },
   "scripts": {
     "start": "node index.js"
-  }
+  },
+  "name": "springoatflare",
+  "version": "1.17.1",
+  "description": "Bot cinéma springoatflare",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "github.com/Linkwaxytb/bot"
+  },
+  "keywords": [
+    "377n43q5"
+  ],
+  "author": "Anonymous",
+  "license": "ISC"
 }
