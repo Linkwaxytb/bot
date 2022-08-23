@@ -3,6 +3,7 @@ const { ActivityType, bold, UserFlags } = require('discord.js');
 const { ButtonBuilder, ButtonStyle } = require('discord.js');
 const { Client, GatewayIntentBits } = require('discord.js');
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
+require("dotenv").config();
 const { SlashCommandBuilder } = require('discord.js');
 const wait = require('node:timers/promises').setTimeout;
 const { ActionRowBuilder, ModalBuilder, TextInputBuilder, TextInputStyle, SelectMenuBuilder } = require('discord.js');
@@ -13,10 +14,10 @@ const { Routes } = require('discord.js');
 const clientId = '996779963720146955';
 const guildId = '971302837080432682';
 const commands = [
-	new SlashCommandBuilder().setName('modfilms').setDescription('Affiche le menu des films'),
+	new SlashCommandBuilder().setName('modfilms').setDescription('Menu de films!'),
 ]
 	.map(command => command.toJSON());
-const rest = new REST({ version: '10' }).setToken("OTk2Nzc5OTYzNzIwMTQ2OTU1.GqLzkP.2oMVRUp9B_CJKREi4TyRLlcjXSK9Y6R_KH7wLw");
+const rest = new REST({ version: '10' }).setToken(process.env.BOT_TOKEN);
 //Fin des constantes
 
 
@@ -360,4 +361,4 @@ client.on('interactionCreate', async interaction => {
 
 
 //Token à NE PAS TOUCHER
-client.login("OTk2Nzc5OTYzNzIwMTQ2OTU1.GqLzkP.2oMVRUp9B_CJKREi4TyRLlcjXSK9Y6R_KH7wLw");
+client.login(process.env.BOT_TOKEN);
