@@ -10,12 +10,13 @@
   "version": "1.17.1",
   "description": "Bot cinéma springoatflare",
   "main": "index.js",
+  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "github.com/Linkwaxytb/bot"
   },
   "keywords": [
-    "377n43q5"
+    ""
   ],
   "author": "Anonymous",
   "license": "ISC"
