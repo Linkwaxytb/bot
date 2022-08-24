@@ -23,8 +23,15 @@ const rest = new REST({ version: '10' }).setToken(process.env.BOT_TOKEN);
 //Fin des constantes
 
 
+app.set('port', (process.env.PORT || 5000));
 
-
+//For avoidong Heroku $PORT error
+app.get('/', function(request, response) {
+    var result = 'App is running'
+    response.send(result);
+}).listen(app.get('port'), function() {
+    console.log('App is running, server is listening on port ', app.get('port'));
+});
 
 
 
@@ -292,7 +299,6 @@ client.on('ready', () => {
     console.log(`Le bot ${client.user.tag} est connecté`);
 	client.user.setActivity('Films,séries,dessins-animés et plein d autres choses avec nous', { type: ActivityType.Watching })});
 
-
   client.on('interactionCreate',  interaction => {
 	if (!interaction.isChatInputCommand()) return;
 
@@ -304,7 +310,7 @@ client.on('ready', () => {
 					.setStyle(ButtonStyle.Link)
 					.setURL("https://discord.com/channels/971302837080432682/991027182325362849"),
 				new ButtonBuilder()
-					.setCustomId('DEUX')
+		 			.setCustomId('DEUX')
 					.setLabel('🔎 Recherche un film')
 					.setStyle(ButtonStyle.Danger),
 				new ButtonBuilder()
