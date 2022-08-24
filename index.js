@@ -22,17 +22,14 @@ const commands = [
 const rest = new REST({ version: '10' }).setToken(process.env.BOT_TOKEN);
 //Fin des constantes
 
-
-app.set('port', (process.env.PORT || 5000));
-
-//For avoidong Heroku $PORT error
+//Pour éviter l'erreur Heroku $PORT
 app.get('/', function(request, response) {
     var result = 'App is running'
     response.send(result);
 }).listen(app.get('port'), function() {
     console.log('App is running, server is listening on port ', app.get('port'));
 });
-
+//fin ne pas toucher
 
 
 
@@ -137,11 +134,31 @@ const RoiLion = new EmbedBuilder()
 	.setImage('https://probot.media/xMxSdxfdtx.gif')
 	.setFooter({ text: 'Par SPRINGOATFLARE'});
 
+	const jours28 = new EmbedBuilder()
+	.setTitle('28 jours plus tard ')
+	.addFields(
+		{ name: 'Synopsis', value: ' Un commando de la Protection Animale fait irruption dans un laboratoire top secret pour délivrer des dizaines de chimpanzés soumis à de terribles expériences. Mais aussitôt libérés, les primates, contaminés par un mystérieux virus et animés d’une rage incontrôlable, bondissent sur leurs sauveurs et les massacrent.28 jours plus tard, le mal s’est répandu à une vitesse fulgurante à travers le pays, la population a été évacuée en masse et Londres n’est plus qu’une ville fantôme. Les rares rescapés se terrent pour échapper aux Contaminés assoiffés de violence. C’est dans ce contexte que Jim, un coursier, sort d’un profond coma...' },
+		{ name: '\u200B', value: '\u200B' },
+		{ name: 'Bande Annonce', value: 'https://www.youtube.com/watch?v=oPvUhUrst20', inline: true },
+		{ name: 'Nous vous souhaitons un agréable visionnage', value: 'De la part de tout le staff', inline: true },
+	)
+	.addFields({ name: 'Lien Film', value: 'https://fs18.upvid.org/jvb3y7ovncsxdgj3np4vnmcod75vtb4dciyusgnuavn7u64qcv5owpne7n3q/v.mp4', inline: true })
+	.setImage('https://th.bing.com/th/id/OIP.qifxamfE1haVOGX9vQkGxQHaK_?w=115&h=180&c=7&r=0&o=5&pid=1.7')
+	.setFooter({ text: 'Par SPRINGOATFLARE'});
 
+	const semaines28 = new EmbedBuilder()
+	.setTitle('28 semaines plus tard ')
+	.addFields(
+		{ name: 'Synopsis', value: ' Il y a six mois, un terrible virus a décimé l’Angleterre et a transformé presque toute la population en monstres sanguinaires. Les forces américaines d’occupation ayant déclaré que l’infection a été définitivement vaincue, la reconstruction du pays peut maintenant commencer. Don a survécu à ces atroces événements, mais il n’a pas réussi à sauver sa femme et la culpabilité le ronge. Lorsqu’il retrouve ses enfants, Andy et Tammy, qu’il n’avait pas revus depuis la catastrophe et qui reviennent à Londres avec la première vague de réfugiés, il leur apprend la mort de leur mère. Partagés entre la joie des retrouvailles et le chagrin, tous trois tentent de se reconstruire et de reprendre une vie normale dans la ville dirigée par l’armée américaine.Pourtant, quelque part, un effroyable secret les attend. Tout n’est pas terminé...' },
+		{ name: '\u200B', value: '\u200B' },
+		{ name: 'Bande Annonce', value: 'https://www.youtube.com/watch?v=ZkOMtSrz9HM', inline: true },
+		{ name: 'Nous vous souhaitons un agréable visionnage', value: 'De la part de tout le staff', inline: true },
+	)
+	.addFields({ name: 'Lien Film', value: 'https://fs2.upvid.org/jvb3vbt2mcsxdgj3nmfvn3a5c3qb4u2qs22nr4y7i5e7rmcdybgnkiawglia/v.mp4', inline: true })
+	.setImage('https://th.bing.com/th/id/OIP.612h1xIrniXTE9qcm4ZAUwHaKC?w=132&h=180&c=7&r=0&o=5&pid=1.7')
+	.setFooter({ text: 'Par SPRINGOATFLARE'});
 
-
-
-
+	
 
 
     const EmbedPrincipal = new EmbedBuilder()
@@ -202,6 +219,10 @@ client.on('interactionCreate', interaction => {
 	else if (['Matrix','matrix','Matrix 1','matrix 1'].includes(favoriteColor)){
 
 		interaction.reply({ embeds: [Matrix1], ephemeral: true});}
+
+	else if (['28 jours plus tard','28 JOURS PLUS TARD','é_ jours plus tard','é_ JOURS PLUS TARD', '28 Jours Plus Tard'].includes(favoriteColor)){
+
+		interaction.reply({ embeds: [jours28], ephemeral: true});}
 
 
 	    
