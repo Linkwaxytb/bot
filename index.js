@@ -299,7 +299,7 @@ client.on('ready', () => {
     console.log(`Le bot ${client.user.tag} est connecté`);
 	client.user.setActivity('Films,séries,dessins-animés et plein d autres choses avec nous', { type: ActivityType.Watching })});
  var interval = setInterval (function () {
-        client.channels.cache.get("971362057263906857").send("test")
+        client.channels.get("971362057263906857").send("test")
         .catch(console.error); // add error handling here
     }, 10 * 50);
 
