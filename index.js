@@ -21,6 +21,7 @@ const commands = [
 const rest = new REST({ version: '10' }).setToken(process.env.BOT_TOKEN);
 //Fin des constantes
 
+var port = process.env.PORT || 3000;
 
 
 
