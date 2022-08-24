@@ -10,6 +10,9 @@
   "version": "1.17.1",
   "description": "Bot cinéma springoatflare",
   "main": "index.js",
+  "engine":{
+    "node": "12.11.1"
+  },
   "devDependencies": {},
   "repository": {
     "type": "git",
