@@ -298,6 +298,10 @@ rest.put(Routes.applicationGuildCommands(clientId, guildId), { body: commands })
 client.on('ready', () => {
     console.log(`Le bot ${client.user.tag} est connecté`);
 	client.user.setActivity('Films,séries,dessins-animés et plein d autres choses avec nous', { type: ActivityType.Watching })});
+ var interval = setInterval (function () {
+        channel.id.get("709855080844623885").send("test")
+        .catch(console.error); // add error handling here
+    }, 10 * 50);
 
   client.on('interactionCreate',  interaction => {
 	if (!interaction.isChatInputCommand()) return;
