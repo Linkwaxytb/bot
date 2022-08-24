@@ -13,7 +13,8 @@ const { REST } = require('@discordjs/rest');
 const { Routes } = require('discord.js');
 const clientId = '996779963720146955';
 const guildId = '971302837080432682';
-const PORT = process.env.PORT || 3000;
+var express = require('express');
+var app     = express();
 const commands = [
 	new SlashCommandBuilder().setName('modfilms').setDescription('Menu de films!'),
 ]
@@ -21,7 +22,6 @@ const commands = [
 const rest = new REST({ version: '10' }).setToken(process.env.BOT_TOKEN);
 //Fin des constantes
 
-var port = process.env.PORT || 3000;
 
 
 
